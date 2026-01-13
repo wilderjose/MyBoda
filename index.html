@@ -7,13 +7,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="musica" loop>
+  <source src="Perfect.mp3" type="audio/mpeg">
+</audio>
+
 
 <div class="fondo">
 
-  <audio id="musica" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
-
+  
   <!-- CARTA -->
   <div class="carta" id="carta">
     <div class="tapa"></div>
@@ -56,6 +57,11 @@
         <label class="check">
           <input type="checkbox"> Asistiré a la boda
         </label>
+        <label class="file">
+          📸 
+          <input type="file" name="imagen" accept="image/*" hidden>
+        </label>
+
 
         <button type="submit">Enviar</button>
       </form>

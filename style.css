@@ -176,3 +176,16 @@ button{
 button:hover{
   transform: scale(1.05);
 }
+.file{
+  display: block;
+  padding: 12px;
+  border-radius: 30px;
+  background: #f8a1b8;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
