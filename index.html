@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Invitación</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fondo">
+
+  <audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- CARTA -->
+  <div class="carta" id="carta">
+    <div class="tapa"></div>
+    <div class="mensaje">
+      <h2>💌 Esta invitación es para ti</h2>
+      <p>Toca para abrir</p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="contenido" id="contenido">
+
+    <h1>Eragnolis & Sara ❤️</h1>
+    <p class="sub">Te invitamos a celebrar nuestro amor</p>
+
+    <div class="fecha">
+      <div>
+        <span>12</span>
+        <small>Marzo</small>
+      </div>
+      <div>
+        <span>2026</span>
+      </div>
+    </div>
+
+    <p>📍 León, Nicaragua</p>
+
+    <!-- TEXTO -->
+    <div class="ll">
+      <p>Con mucha alegría queremos que formes parte de este día tan especial.</p>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+      <h3>Confirma tu asistencia</h3>
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="tel" placeholder="Tu teléfono" required>
+
+        <label class="check">
+          <input type="checkbox"> Asistiré a la boda
+        </label>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
