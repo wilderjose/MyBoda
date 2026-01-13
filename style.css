@@ -161,7 +161,7 @@ input:focus{
   align-items: center;
   gap: 8px;
   font-size: 0.9em;
-  color: #444;
+  color: #444444;
 }
 
 button{
@@ -184,7 +184,7 @@ button:hover{
   padding: 12px;
   border-radius: 30px;
   background: #f8a1b8;
-  color: white;
+  color: rgb(161, 13, 13);
   text-align: center;
   cursor: pointer;
   margin-bottom: 10px;
