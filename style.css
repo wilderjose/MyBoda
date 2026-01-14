@@ -192,3 +192,37 @@ button:hover{
   width: 60px;
   height: 60px;
 }
+
+
+
+
+/*Perfil */
+
+
+.upload-content{
+    text-align: center;
+    color:#ff477e;
+    font-weight: bold;
+}
+
+/* Imagen general (foto subida) */
+.upload-content img{
+    width:120px;
+    height:120px;
+    border-radius:50%;    /* redonda */
+    object-fit:cover;
+    margin-bottom:10px;
+    transition:0.4s;
+}
+
+/* Ícono por defecto */
+.upload-content img.icono{
+    width:50px;           /* ícono pequeño */
+    height:50px;
+    border-radius:50%;     /* redondo */
+    opacity:0.7;
+    margin-bottom:10px;
+    object-fit:contain;
+}
+
+

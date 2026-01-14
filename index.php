@@ -50,27 +50,49 @@
     <!-- FORMULARIO -->
     <div class="formulario">
       <h3>Confirma tu asistencia</h3>
-      <form>
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="tel" placeholder="Tu teléfono" required>
+      <form action="guardar.php" method="POST" enctype="multipart/form-data"  id="formInvitado">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="number" name="edad" placeholder="Ingresa tu edad" required>
 
         <label class="check">
-          <input type="checkbox"> Asistiré a la boda
+          <input type="checkbox" name="asistira"> Asistiré a la boda
         </label>
-        <label class="file">
+
+        <label class="upload-box">
+          <input type="file" name="imagen" accept="image/*" hidden onchange="previewImage(this)">
           
-          📸 
-          <input type="file" name="imagen" accept="image/*" hidden>
+          <div class="upload-content">
+            <img id="preview" src="https://cdn-icons-png.flaticon.com/512/685/685655.png" class="icono">
+          
+          </div>
         </label>
+
 
 
         <button type="submit">Enviar</button>
       </form>
+        
     </div>
 
   </div>
 
 </div>
+<script>
+  function previewImage(input){
+      const file = input.files[0];
+      if(file){
+          const reader = new FileReader();
+          reader.onload = function(e){
+              const img = document.getElementById("preview");
+              img.src = e.target.result;
+              img.classList.remove("icono"); // ahora es foto real grande
+          }
+          reader.readAsDataURL(file);
+      }
+  }
+
+</script>
+
 
 <script src="script.js"></script>
 </body>
