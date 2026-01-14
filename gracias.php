@@ -25,7 +25,7 @@
     <p>Estamos muy felices de que nos acompañes en este día tan especial.</p>
 
     <script>
-        document.getElementById("formInvitado").addEventListener("submit", function(e){
+    document.getElementById("formInvitado").addEventListener("submit", function(e){
     e.preventDefault();
     const form = this;
     const data = new FormData(form);

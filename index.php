@@ -11,11 +11,9 @@
   <source src="Perfect.mp3" type="audio/mpeg">
 </audio>
 
-
+<!-- CARTA -->
 <div class="fondo">
-
   
-  <!-- CARTA -->
   <div class="carta" id="carta">
     <div class="tapa"></div>
     <div class="mensaje">
@@ -27,8 +25,19 @@
   <!-- CONTENIDO -->
   <div class="contenido" id="contenido">
 
-    <h1>Eragnolis & Sara ❤️</h1>
-    <p class="sub">Te invitamos a celebrar nuestro amor</p>
+
+
+    <div class="imagen">
+    <div class="texto-centrado">
+        <h3>Eragnoli</h3>
+        <h3>Sarita</h3>
+       
+       
+    </div>
+</div>
+
+
+   
 
     <div class="fecha">
       <div>
@@ -40,13 +49,31 @@
       </div>
     </div>
 
-    <p>📍 León, Nicaragua</p>
+    <p>📍 Managua, Nicaragua</p>
 
     <!-- TEXTO -->
     <div class="ll">
       <p>Con mucha alegría queremos que formes parte de este día tan especial.</p>
     </div>
 
+
+    <!-- Lugar --->
+
+    <div class="ubicacion">
+
+
+    </div>
+    <!--   Cronometro --->
+      
+      <div class="cuenta-contenedor">
+          <div id="cuenta-regresiva">
+              <span id="dias">00</span> días 
+              <span id="horas">00</span> h 
+              <span id="minutos">00</span> m 
+              <span id="segundos">00</span> s
+          </div>
+      </div>
+        
     <!-- FORMULARIO -->
     <div class="formulario">
       <h3>Confirma tu asistencia</h3>
@@ -66,9 +93,6 @@
           
           </div>
         </label>
-
-
-
         <button type="submit">Enviar</button>
       </form>
         
@@ -77,23 +101,38 @@
   </div>
 
 </div>
+
 <script>
-  function previewImage(input){
-      const file = input.files[0];
-      if(file){
-          const reader = new FileReader();
-          reader.onload = function(e){
-              const img = document.getElementById("preview");
-              img.src = e.target.result;
-              img.classList.remove("icono"); // ahora es foto real grande
-          }
-          reader.readAsDataURL(file);
-      }
-  }
+ function previewImage(input){
+    const file = input.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            const img = document.getElementById("preview");
+
+            // Animación: ícono se hace pequeño y transparente
+            img.style.transform = "scale(0.3)";
+            img.style.opacity = "0";
+
+            setTimeout(() => {
+                img.src = e.target.result;  // cambia la imagen
+                img.classList.remove("icono"); // quita la clase icono
+
+                // Animación de aparición de la foto
+                img.style.transform = "scale(1)";
+                img.style.opacity = "1";
+            }, 300); // 300ms para suavidad
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
 
 </script>
 
 
 <script src="script.js"></script>
+<script src="time.js"></script>
+
 </body>
 </html>

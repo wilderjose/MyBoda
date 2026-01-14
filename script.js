@@ -15,3 +15,6 @@ carta.addEventListener("click", () => {
    
   }, 1200);
 });
+
+
+

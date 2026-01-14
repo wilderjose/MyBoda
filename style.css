@@ -7,7 +7,7 @@
 }
 
 body{
-  background: linear-gradient(135deg, #f9c5d1, #fce7eb);
+   background: linear-gradient(135deg, #ebe9e3, #f5f5f5); 
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body{
   width: 100%;
   max-width: 400px;
   text-align: center;
-  padding: 20px;
+  padding: 3px;
 }
 
 /* Carta */
@@ -81,7 +81,7 @@ body{
   display: none;
   margin-top: 20px;
   background: white;
-  border-radius: 20px;
+  
   padding: 25px;
   box-shadow: 0 15px 40px rgba(0,0,0,.15);
   animation: aparecer 1.5s;
@@ -166,7 +166,8 @@ input:focus{
 
 button{
   margin-top: 10px;
-  background: linear-gradient(120deg,#c94f7c,#f8a1b8);
+  background: linear-gradient(120deg, #FFD700, #bb8e09b7);
+
   border: none;
   color: white;
   padding: 12px;
@@ -224,5 +225,60 @@ button:hover{
     margin-bottom:10px;
     object-fit:contain;
 }
+.imagen {
+    background-image: url('descarga.png');
+    background-size: cover;      /* cubre todo el contenedor */
+    background-position: center; /* centrado */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 310px;               /* ocupa toda la pantalla */
+    position: relative;          /* necesario para posicionar el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Texto centrado */
+.texto-centrado {
+    position: absolute;
+    top: 28%;               /* sube el texto hacia arriba (antes estaba 50%) */
+    left: 50%;              /* centrado horizontal */
+    transform: translateX(-50%); /* solo centra horizontalmente */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
 
 
+.texto-centrado h3 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: darkgoldenrod;
+}
+
+.texto-centrado p {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.cuenta-contenedor {
+    width: 100%;
+    padding: 20px;
+    background: #f5f5f5;       /* fondo gris suave */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#cuenta-regresiva {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #b03060;            /* color bonito para destacar */
+    display: flex;
+    gap: 15px;
+}
